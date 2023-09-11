@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  width: 80%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: green;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  background-color: brown;
+  width: 45%;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+  color: white;
+}
+
+.col-75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 80%;
+    margin-top: 0;
+
+  }
+}
+</style>
+</head>
+
+  <body>
+
+    <h2>Form</h2>
+    
+    <div class="container">
+      <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="Email" placeholder="Your email is ..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="password">password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" id="password" name="Password" placeholder="password">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="phone_number">Phone No.</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="phone_number" name="Phone No." placeholder="Your Phone Number is ..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Gender">Gender</label>
+        </div>
+        <div class="col-75">
+          <label for="Gender">Male:</label>
+          <input type="checkbox" id="Gender">
+          <label for="Gender">female:</label>
+          <input type="checkbox" id="Gender">
+          <label for="Gender">others:</label>
+          <input type="checkbox" id="Gender">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Language">Language</label>
+        </div>
+        <div class="col-75">
+          <select id="Language" name="Language">
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Marathi">Marathi</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="zip">Zipcode</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="zip" name="Zipcode" placeholder="Your Zipcode..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">about</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="about" placeholder="Write something.." style="height: 75px"></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Register">
+      </div>
+      </form>
+    </div>
+    
+    </body>
+
+</html>
